@@ -20,3 +20,9 @@ services:
       - "9090:9090"
     volumes:
       - ./prometheus/prometheus.yml:/etc/prometheus/prometheus.yml
+      
+  # Here is our new Node Exporter!
+  node-exporter:
+    image: prom/node-exporter:latest
+    ports:
+      - "9100:9100"
